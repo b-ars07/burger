@@ -41,7 +41,7 @@ task('copy:fonts', () => {
 });
 
 task('styles', () => {
-    return src([...STYLES_LIBS, `./${SRC_PATH}/styles/main.scss`])
+    return src(`./${SRC_PATH}/styles/main.scss`)
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
         .pipe(concat('main.min.scss'))
         .pipe(sassGlob())

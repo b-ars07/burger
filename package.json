@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Erfolleg/Burger.git"
+    "url": "git+https://github.com/b-ars07/burger"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Erfolleg/Burger/issues"
+    "url": "https://github.com/b-ars07/burger/issues"
   },
-  "homepage": "https://github.com/Erfolleg/Burger#readme",
+  "homepage": "https://github.com/b-ars07/burger#readme",
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
