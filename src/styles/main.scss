@@ -9,7 +9,7 @@ $desktop: 820px;
 $tablets: 768px;
 $phones: 480px;
 
-//@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/normalize.css/normalize.css";
 @import "css/misc/media.scss";
 @import "css/misc/fonts.scss";
 @import "css/misc/layout.scss";
