@@ -1,0 +1,40 @@
+.menu-fix {
+  position: fixed;
+  top: rem(91px);
+  right: rem(51px);
+  z-index: 2;
+  @include tablets {
+    display: none;
+  }
+  @include phones {
+    display: none;
+  }
+}
+
+.menu-fix__dat {
+  display: block;
+  height: rem(16px);
+  width: rem(16px);
+  border-radius: 50%;
+  border: rem(1px) solid transparent;
+  margin-bottom: rem(8px);
+  position: relative;
+  &:hover {
+    border-color: $white;
+  }
+  &--active {
+    border-color: $white;
+  }
+
+  &::before {
+    content: "";
+    width: rem(6px);
+    height: rem(6px);
+    background-color: $white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}

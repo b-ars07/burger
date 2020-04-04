@@ -1,0 +1,135 @@
+.reviews__list {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.reviews__item {
+  // flex-basis: 25%;
+  width: 25%;
+  height: 50%;
+  position: relative;
+  filter: grayscale(100%);
+  
+  &:hover {
+    .reviews__text {
+      opacity: 1;
+
+     
+    }
+  }
+
+  @include tablets {
+    flex-basis: 50%;
+    height: 25%;
+  }
+
+}
+
+.review {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__photo {
+  width: 100%;
+  height: 100%;
+  // object-fit: cover;
+
+
+}
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reviews__text {
+  opacity: 0;
+  @include ubuntu (light);
+  font-size: rem(14px);
+  line-height: 1.7;
+  text-align: left;
+  color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($black,.6);
+  padding-top: 10%;
+  padding-bottom: 0;
+  padding-left: 12%;
+  padding-right: 8%;
+  transition: opacity .7s;
+
+  & .btn__ref {
+    background-color: $gray;
+    width: fit-content;
+    transition: .4s;
+    @include tablets {
+      justify-content: center;
+      margin: 0 auto;
+    }
+    @include phones {
+      justify-content: center;
+      font-size: rem(12px);
+    }
+          
+      &:hover {
+        background-color: $graydark;
+      
+    }
+    &:after {
+      content: 'Подробнее';
+      @include phones {
+        content: 'Читать отзыв';
+      }
+      
+    }
+  }
+  
+
+  & .reviews__name {
+    margin-bottom: rem(16px);
+    @include gagalin();
+    text-transform: uppercase;
+  }
+  & p {
+    margin-bottom: rem(12px);
+  }
+  
+@include tablets {
+  padding: 6%;
+ 
+  text-align: center;
+  & .reviews__name {
+    margin-bottom: 1%;
+  }
+  & p {
+    font-size: rem(12px);
+    margin-bottom: 2%;
+  }
+  & .btn__ref{
+    padding: rem(10px) rem(12px);
+  }
+}
+@include phones {
+  padding: 10%;
+  padding-top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  p {
+    display: none;
+  }
+  .reviews__name {
+    font-size: rem(23px);
+    line-height: 1.2;
+    margin-bottom: 6%;
+
+  }
+}
+}
