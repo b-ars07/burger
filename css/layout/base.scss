@@ -1,0 +1,118 @@
+html{
+  
+  font-size: 16px;
+
+  @include tablets {
+    font-size: rem(15px);
+  }
+
+  @include phones {
+    font-size: rem(14px);
+  }
+  html,body{
+    height: 100%;
+  }
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: rem(0px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  touch-action: none;
+}
+
+.wrapper{
+  overflow: hidden;
+  height: 100vh;
+
+  position: relative;
+  width: 100%;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+}
+
+.container{
+  position: relative;
+  margin: 0 auto;
+  max-width: rem(940px);
+  width: 95%;
+  display:flex;
+  flex-direction: column;
+  @include phones {
+    width: 91%;
+  }
+}
+
+ul{
+  margin:0;
+  padding: 0;
+}
+ul li{
+  list-style: none;
+}
+button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  font-weight: normal;
+}
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*{
+  box-sizing: border-box;
+}
+footer {
+  position: relative;
+  width: 100%;
+}
+.section {
+  height: 100%;
+  min-height: rem(650px);
+  display:flex;
+  position: relative;
+  overflow: hidden;
+  // flex-direction: column;
+  // justify-content: center;
+
+  @include tablets {
+    min-height: 0;
+  }
+  @include phones {
+    min-height: 0;
+  }
+
+}
+
+.title {
+  @include gagalin();
+  font-size: rem(72px);
+  line-height: 1;
+  @include phones {
+    font-size: rem(60px);
+  }
+  &--yellow {
+    color: $yellow;
+  }
+  &--black{
+    color: $black;
+  }
+  &--white{
+    color: $white;
+  }
+  &--red{
+    color: $red;
+  }
+  
+}

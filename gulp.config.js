@@ -1,12 +1,10 @@
 module.exports = {
-    SRC_PATH : "src",
-    DIST_PATH : "dist",
-    STYLES_LIBS : [
-        "node_modules/normalize.css/normalize.css"
-    ],
-    JS_LIBS: [
-        "node_modules/jquery/dist/jquery.js",
-        "node_modules/mobile-detect/mobile-detect.min.js",
-        "node_modules/jquery-touchswipe/jquery.touchSwipe.js"        
-    ]
+  VIDEO_PATH : 'video',
+  FONTS_PATH : "fonts",
+  IMG_PATH : "img",
+  CSS_PATH : "css",
+  DIST_PATH : "dist",
+  JS_LIBS : [
+    "node_modules/jquery/dist/jquery.js"
+  ]
 }

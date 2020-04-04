@@ -1,0 +1,82 @@
+.best {
+  background-image: url('../img/bg/best.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.best__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.best__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include phones {
+    padding-top: 7%;
+  }
+}
+.best__title{
+  align-items: center;
+  margin:0 auto;
+  margin-bottom: rem(50px);
+  @include phones {
+    text-align: center;
+    // margin-bottom: 5vh;
+    font-size: rem(50px);
+  }
+  }
+.best__list {
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.best__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+  @include phones {
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5vh;
+    & .best__icon {
+      margin-right: 5%;
+      margin-bottom: 0;
+    }
+    & h3 {
+      font-size: rem(18px);
+    }
+    & p {
+      font-size: rem(10px);
+      line-height: 1.4;
+    }
+  }
+ 
+  & .best__icon {
+    display: block;  
+    margin-bottom: rem(35px);
+  }
+  & h3 {
+    @include lifehack();
+    font-size: rem(24px);
+    line-height: 1.17;
+    margin-bottom: rem(13px);
+  }
+  & p {
+    @include ubuntu(light);
+    font-size: rem(14px);
+    line-height: 1.71;
+    opacity: .8;
+  }
+}

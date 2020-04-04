@@ -1,0 +1,55 @@
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav__list {
+  width: 100%;
+  align-items: center;
+  display:flex;
+  justify-content: flex-end;
+  
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.nav__item {
+  display:flex;
+  align-items: center;
+  margin-right: rem(8px);
+  
+  &:before {
+    content:"";
+    width: rem(4px);
+    height: rem(4px);
+    background-color: $white;
+    border-radius: 50%;
+    display: block;  
+    margin-right: rem(10px);  
+  }
+  &:nth-child(1) {
+    &:before{
+      display: none;
+    }
+  }
+}
+
+.nav__link {
+  @include ubuntu(medium);
+  text-decoration: none;
+  color: $white;
+  font-size: rem(11px);
+  line-height: 2;
+  text-transform: uppercase;
+  white-space: nowrap;  
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover {
+    text-decoration: underline;;
+  }
+}
